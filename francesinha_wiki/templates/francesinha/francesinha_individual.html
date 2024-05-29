@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="details-container">
+    <h2>Francesinha: {{ objects.name }}</h2>
+    <p><strong>Price:</strong> {{ objects.price }}$</p>
+    <p><strong>Rating:</strong> {{ objects.rating }}</p>
+
+    {% if objects.ingredients %}
+        <h3>Ingredients:</h3>
+        <ul>
+            {% for ingredient in objects.ingredients.all %}
+                <li>{{ ingredient.name }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No ingredients</p>
+    {% endif %}
+</div>
+
+{% endblock %}

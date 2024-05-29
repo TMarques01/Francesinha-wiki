@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="details-container">
+    <h2>Restaurant: {{ objects.name }}</h2>
+    <p><strong>Address:</strong> {{ objects.address }}</p>
+    <p><strong>City:</strong> {{ objects.city }}</p>
+    <p><strong>Country:</strong> {{ objects.country }}</p>
+    <p><strong>Rating:</strong> {{ objects.rating }}</p>
+
+    {% if objects.francesinhas %}
+        <h3>Francesinhas:</h3>
+        <ul>
+            {% for francesinha in objects.francesinhas.all %}
+                <li>{{ francesinha.name }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Without Francesinhas</p>
+    {% endif %}
+</div>
+
+{% endblock %}

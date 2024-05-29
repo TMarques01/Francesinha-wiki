@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class = "section">
+
+    {% for obj in objects %}
+        <h2>Francesinha - <a href = '{{obj.get_absolute_url}}' > {{ obj.name }}</a></h2>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

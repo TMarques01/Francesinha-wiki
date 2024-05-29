@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content%}
+<h1>Welcome to the Francesinha Wiki!</h1>
+<p>This is the home page of our website.</p>
+
+{% load static %}
+<img src="{% static 'banner.png' %}" alt="Francesinha Banner" width="500" height="300">
+{% endblock%}
+

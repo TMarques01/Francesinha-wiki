@@ -1,0 +1,395 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.section {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.333% - 20px);
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+.card a {
+    text-decoration: none;
+    color: #333;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+.section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #444;
+    text-align: center;
+}
+
+.item {
+    padding: 15px;
+    margin: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.item a:hover {
+    text-decoration: underline;
+    color: #555;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+form h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form p {
+    margin-bottom: 15px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select,
+form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+.center-text {
+    text-align: center;
+}
+
+/* Francesinha and Restaurant details*/
+
+.details-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.details-container h2 {
+    color: #444;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.details-container p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.details-container h3 {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.details-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.details-container ul li {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+
+/* Francesinha Search*/
+
+.search-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.search-container h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.search-container form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.search-container button:hover {
+    background-color: #555;
+}
+
+.results-container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.result-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.result-card h2 {
+    margin-top: 0;
+}
+
+.result-card p {
+    margin: 5px 0;
+}
+
+.result-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.result-card ul li {
+    margin: 5px 0;
+}
+
+/* Path: Restaurant search */
+
+.search-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.search-container h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.search-container form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.search-container button:hover {
+    background-color: #555;
+}
+
+.results-container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.result-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.result-card h2 {
+    margin-top: 0;
+}
+
+.result-card p {
+    margin: 5px 0;
+}
+
+.result-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.result-card ul li {
+    margin: 5px 0;
+}
+
+/* Restaurant delete*/
+
+.confirmation-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.confirmation-form p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;  /* Aumentar o espaçamento entre os botões */
+}
+
+.confirmation-form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.confirmation-form input[type="submit"]:hover {
+    background-color: #c9302c;
+}
+
+.confirmation-form a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5bc0de;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    line-height: normal;
+}
+
+.confirmation-form a:hover {
+    background-color: #31b0d5;
+}
+
