@@ -48,12 +48,6 @@ nav ul li a {
     margin-bottom: 20px;
 }
 
-.home-container p {
-    font-size: 1.2em;
-    color: #666;
-    margin-bottom: 30px;
-}
-
 .home-container img {
     max-width: 100%;
     height: auto;
