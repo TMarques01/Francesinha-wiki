@@ -34,11 +34,6 @@ nav ul li a {
     padding: 20px;
 }
 
-.section {
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
 
 .card {
     background-color: #fff;
@@ -65,9 +60,6 @@ nav ul li a {
     text-decoration: underline;
 }
 
-
-
-
 .section {
     max-width: 800px;
     margin: 20px auto;
@@ -75,6 +67,9 @@ nav ul li a {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .section h2 {
@@ -189,6 +184,24 @@ form input[type="submit"]:hover {
     margin: 5px 0;
 }
 
+.details-container .button-container-delete {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.details-container .button-container-delete a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0044;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.details-container .button-container-delete a:hover {
+    background-color: #0056b3;
+}
 
 /* Francesinha Search*/
 
@@ -340,7 +353,7 @@ form input[type="submit"]:hover {
     margin: 5px 0;
 }
 
-/* Restaurant delete*/
+/* Restaurant and Fracesinha delete*/
 
 .confirmation-form {
     max-width: 600px;
@@ -393,3 +406,43 @@ form input[type="submit"]:hover {
     background-color: #31b0d5;
 }
 
+/* Francesinha and Restaurant update*/
+
+.update-form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.update-form-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.update-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.update-form-container form p {
+    margin: 0;
+}
+
+.update-form-container form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.update-form-container form button:hover {
+    background-color: #0056b3;
+}

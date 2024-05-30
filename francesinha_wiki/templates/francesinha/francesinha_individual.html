@@ -17,6 +17,10 @@
     {% else %}
         <p>No ingredients</p>
     {% endif %}
+    
+    <div class="button-container-delete">
+        <a href="{% url 'francesinha-remove' objects.id %}">Remove</a>
+    </div>
 </div>
 
 {% endblock %}
