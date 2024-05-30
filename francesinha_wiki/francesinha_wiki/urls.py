@@ -47,6 +47,6 @@ urlpatterns = [
     path('restaurant/create/', restaurant_create_view, name='restaurant-create'),
     path('restaurant/<int:id>/', restaurant_detail_view, name='restaurant-view'),
     path('restaurant/<int:id>/update/', restaurant_update_view, name='restaurant-update'),
-    path('restaurant/<int:id>/delete/', restaurant_delete_view, name='restaurant-delete'),
+    path('restaurant/<int:id>/delete/', restaurant_delete_view, name='restaurant-remove'),
     path('', home_view, name='home')
 ]

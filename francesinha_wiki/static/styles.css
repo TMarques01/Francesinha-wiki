@@ -5,6 +5,8 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Navegation bar */
+
 nav {
     background-color: #333;
     color: white;
@@ -28,12 +30,44 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Home page */
+
+.home-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.home-container h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.home-container p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.home-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
 .container {
     display: flex;
     justify-content: space-around;
     padding: 20px;
 }
-
 
 .card {
     background-color: #fff;
@@ -60,6 +94,8 @@ nav ul li a {
     text-decoration: underline;
 }
 
+/* Francesinha and Restaurant geral list*/
+
 .section {
     max-width: 800px;
     margin: 20px auto;
@@ -79,6 +115,8 @@ nav ul li a {
     text-align: center;
 }
 
+
+
 .item {
     padding: 15px;
     margin: 10px 0;
@@ -95,6 +133,7 @@ nav ul li a {
     text-decoration: underline;
     color: #555;
 }
+
 
 form {
     background-color: #fff;
@@ -184,22 +223,35 @@ form input[type="submit"]:hover {
     margin: 5px 0;
 }
 
-.details-container .button-container-delete {
+/* Francesinha and Restaurant detail button delete*/
+
+.details-container .button-container {
     text-align: center;
     margin-top: 20px;
 }
 
-.details-container .button-container-delete a {
+.details-container .button-container a{
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ff0044;
     color: white;
     border-radius: 5px;
     text-decoration: none;
     font-size: 1em;
 }
 
-.details-container .button-container-delete a:hover {
+.button-container .delete-button {
+    background-color: #c70734;
+}
+
+.button-container .delete-button:hover {
+    background-color: #77011d;
+}
+
+.button-container .update-button {
+    background-color: #007bff;
+}
+
+.button-container .update-button:hover {
     background-color: #0056b3;
 }
 
@@ -278,7 +330,7 @@ form input[type="submit"]:hover {
     margin: 5px 0;
 }
 
-/* Path: Restaurant search */
+/* Restaurant search */
 
 .search-container {
     max-width: 800px;
@@ -392,7 +444,7 @@ form input[type="submit"]:hover {
 
 .confirmation-form a {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 250px;
     background-color: #5bc0de;
     color: white;
     border: none;

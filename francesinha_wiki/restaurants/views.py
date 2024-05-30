@@ -40,7 +40,7 @@ def restaurant_detail_view(request, id):
     context = {
         "objects": obj
     }
-    print(obj)
+
     return render(request, "restaurants/restaurant_individual.html", context)
 
 

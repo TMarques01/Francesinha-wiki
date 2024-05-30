@@ -18,8 +18,9 @@
         <p>No ingredients</p>
     {% endif %}
     
-    <div class="button-container-delete">
-        <a href="{% url 'francesinha-remove' objects.id %}">Remove</a>
+    <div class="button-container">
+        <a href="{% url 'francesinha-remove' objects.id %}"class = "delete-button">Remove</a>
+        <a href="{% url 'francesinha-update' objects.id %}" class="update-button">Update</a>
     </div>
 </div>
 

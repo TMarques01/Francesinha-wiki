@@ -45,7 +45,7 @@ def francesinha_detail_view(request, id):
     context = {
         "objects": obj
     }
-    print(obj)
+
     return render(request, "francesinha/francesinha_individual.html", context)
 
 

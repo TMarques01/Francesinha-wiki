@@ -19,6 +19,12 @@
     {% else %}
         <p>Without Francesinhas</p>
     {% endif %}
+
+    <div class="button-container">
+        <a href="{% url 'restaurant-remove' objects.id %}"class = "delete-button">Remove</a>
+        <a href="{% url 'restaurant-update' objects.id %}" class="update-button">Update</a>
+    </div>
+
 </div>
 
 {% endblock %}
