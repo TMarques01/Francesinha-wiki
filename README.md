@@ -47,7 +47,7 @@ pip install psycopg2-binary
 
 ### 4. Configure the database
 
-When you have the database created, you should go to psql and execute these commands:
+When you have the database created, you should go to **psql** and execute these commands:
 
 ```bash
 CREATE DATABASE francesinha;
@@ -101,4 +101,26 @@ python manage.py runserver
 
 Open your browser and access the application at [localhost:8000](http://localhost:8000).
 
----
+
+You are now ready to have the Francesinha Wiki application running locally in your development environment. Feel free to adjust the instructions as necessary to meet the specific needs of your project and environment.
+
+
+
+
+## User Manual
+
+When you enter the website, the application home page will appear. At the top, you will have the navigation bar that contains almost all of the application's features:
+
+1. Francesinhas: In this tab, you have access to a list of all francesinhas. If you click on a particular francesinha you can see its details.
+- within the details it is also possible to delete the francesinha and update
+
+2. Add Francesinha:
+
+3. Search Francesinha
+
+4. Restaurants:
+
+5. Add Restaurants:
+
+6. Search Restaurant
+
