@@ -1,4 +1,23 @@
 
+# Francesinha Wiki
+
+## Introduction
+Welcome to the Francesinha Wiki repository! This application was developed to manage and view information about Francesinhas and Restaurants in an intuitive and efficient manner.
+
+## Technologies Used
+### Backend
+- Django: Used for the backend structure, including business logic and database communication.
+- PostgreSQL: Used as the relational database management system to store data.
+### Frontend
+- HTML: Used to structure the content of the web application.
+- CSS: Used to style and enhance the visual appearance of the application.
+
+
+
+
+
+
+
 ## Installation Manual
 
 Ensure you have the following items installed on your system:
