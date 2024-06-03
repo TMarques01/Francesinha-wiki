@@ -12,12 +12,6 @@ Welcome to the Francesinha Wiki repository! This application was developed to ma
 - HTML: Used to structure the content of the web application.
 - CSS: Used to style and enhance the visual appearance of the application.
 
-
-
-
-
-
-
 ## Installation Manual
 
 Ensure you have the following items installed on your system:
@@ -53,6 +47,7 @@ When you have the database created, you should go to **psql** and execute these 
 CREATE DATABASE francesinha;
 CREATE USER 'your_user' WITH PASSWORD 'your_user_password';
 GRANT ALL PRIVILEGES ON DATABASE francesinha TO 'your_user';
+GRANT ALL ON SHCEMA public TO 'your_user';
 ```
 
 ### 5. Configure the Django to use PostgreSQL
@@ -104,23 +99,29 @@ Open your browser and access the application at [localhost:8000](http://localhos
 
 You are now ready to have the Francesinha Wiki application running locally in your development environment. Feel free to adjust the instructions as necessary to meet the specific needs of your project and environment.
 
-
-
-
 ## User Manual
 
 When you enter the website, the application home page will appear. At the top, you will have the navigation bar that contains almost all of the application's features:
 
-1. Francesinhas: In this tab, you have access to a list of all francesinhas. If you click on a particular francesinha you can see its details.
-- within the details it is also possible to delete the francesinha and update
+- Home
+- Francesinhas
+- Restaurants
+- Ingredients
+- Search
 
-2. Add Francesinha:
+In the 3 main tabs (Francesinhas, Restaurants and Ingredients) it is possible to view all the points. By clicking on them you can see the **details**, **delete** or **update**. In the '**search**' tab it is possible to search for all types. Furthermore, it is possible to sort by **name** and **rating**. If you don't put anything in the search bar, you can see all the values ​​of the selected type.
 
-3. Search Francesinha
+## Admin Page
 
-4. Restaurants:
+To access the administrator, you have to type in the browser:
 
-5. Add Restaurants:
+```bash
+localhost:8000/admin
+```
+You must login using the super user created previously.
 
-6. Search Restaurant
+This will give you direct access to the database, allowing you to make any modifications.
 
+### Extra
+
+All entities are 'soft deletable' which means that when deleted in the application, they are not completely deleted in the database. To permanently delete them you need to use the 'Admin page'.
