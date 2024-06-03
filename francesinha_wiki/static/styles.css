@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Lucida Console", monospace;;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -103,13 +103,37 @@ nav ul li a {
 }
 
 .section h2 {
-    font-size: 2em;
+    font-size: 1em;
     margin-bottom: 20px;
     color: #444;
     text-align: center;
 }
 
+.section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #77011d;
+    text-align: center;
+}
 
+.section .button-container {
+    text-align: center;
+    padding: 10px;
+}
+
+.section .button-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007BFF;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.section .button-container a:hover {
+    background-color: #0056b3;
+}
 
 .item {
     padding: 15px;
@@ -215,6 +239,17 @@ form input[type="submit"]:hover {
 .details-container ul li {
     font-size: 1.2em;
     margin: 5px 0;
+}
+
+.details-container img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Francesinha and Restaurant detail button delete*/

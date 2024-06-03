@@ -2,8 +2,8 @@
 
 {% block content %}
 <div class="update-form-container">
-    <h2>Update Francesinha</h2>
-    <form method="POST" enctype="multipart/form-data">
+    <h2>Update Ingredient</h2>
+    <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Update</button>

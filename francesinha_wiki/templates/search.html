@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="search-container">
+  <h2>Search</h2>
+  <form method="GET" action="{% url 'search' %}">
+    <input type="text" name="q" placeholder="Search...">
+    <select name="type">
+      <option value="none">Select a type...</option>
+      <option value="francesinha">Francesinhas</option>
+      <option value="restaurant">Restaurants</option>
+      <option value="ingredient">Ingredients</option>
+    </select>
+    <select name="order">
+      <option value="none">Select</option>
+      <option value="rating">Rating</option>      
+      <option value="name">Name</option>
+    </select>
+    <button type="submit">Search</button>
+  </form>
+</div>
+
+<div class="results-container">
+  {% if francesinhas %}
+    <h2>Francesinhas</h2>
+    {% for francesinha in francesinhas %}
+      <div class="result-card">
+        <h2><a href="{{francesinha.get_absolute_url}}">{{ francesinha.name }}</a></h2>
+        <p><strong>Price:</strong> ${{ francesinha.price }}</p>
+        <p><strong>Rating:</strong> {{ francesinha.rating }}</p>
+        <h3>Ingredients:</h3>
+        <ul>
+          {% for ingredient in francesinha.ingredients.all %}
+            <li>{{ ingredient.name }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  {% endif %}
+
+  {% if restaurants %}
+    <h2>Restaurants</h2>
+    {% for restaurant in restaurants %}
+      <div class="result-card">
+        <h2><a href="{{restaurant.get_absolute_url}}">{{ restaurant.name }}</a></h2>
+        <p><strong>Address:</strong> {{ restaurant.address }}</p>
+        <p><strong>City:</strong> {{ restaurant.city }}</p>
+        <p><strong>Country:</strong> {{ restaurant.country }}</p>
+        <p><strong>Rating:</strong> {{ restaurant.rating }}</p>
+        <h3>Francesinhas:</h3>
+        <ul>
+          {% for francesinha in restaurant.francesinhas.all %}
+            <li>{{ francesinha.name }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  {% endif %}
+
+  {% if ingredients %}
+    <h2>Ingredients</h2>
+    {% for ingredient in ingredients %}
+        <div class="result-card">
+            <h2><a href="{{ingredient.get_absolute_url}}">{{ ingredient.name }}</a></h2>
+        </div>
+    {% endfor %}
+{% endif %}
+
+  {% if not francesinhas and not restaurants and not ingredients%}
+    <p>No results found</p>
+  {% endif %}
+</div>
+{% endblock %}

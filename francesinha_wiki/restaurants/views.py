@@ -9,7 +9,7 @@ def restaurant_update_view(request, id):
     obj = get_object_or_404(Restaurant, id = id)
     form = RestaurantForm(instance = obj)
     if request.method == "POST":
-        form = RestaurantForm(request.POST, instance = obj)
+        form = RestaurantForm(request.POST, request.FILES, instance = obj)
         if form.is_valid():
             form.save()
             return redirect('../')
@@ -62,12 +62,13 @@ def restaurant_delete_view(request, id):
 def restaurant_create_view(request):
     form = RestaurantForm()
     if request.method == "POST":
-        form = RestaurantForm(request.POST)
+        form = RestaurantForm(request.POST,request.FILES)
         if form.is_valid():
             instance = form.save(commit=False)
             instance.save()
             form.save_m2m() 
             form = RestaurantForm()
+            return redirect('../')
         else:
             print(form.errors)
                
@@ -75,18 +76,3 @@ def restaurant_create_view(request):
         "form": form
     }
     return render(request, "restaurants/restaurant_create.html", context)
-
-
-
-def restaurant_list_view(request):
-    query = request.GET.get('q')
-    
-    if query:
-        objs = Restaurant.objects.filter(name__icontains=query)
-    else:
-        objs = Restaurant.objects.all()
-
-    context = {
-        "objects": objs
-    }
-    return render(request, "restaurants/restaurant_list.html", context)

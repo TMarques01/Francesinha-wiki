@@ -17,11 +17,18 @@
     {% else %}
         <p>No ingredients</p>
     {% endif %}
+
+    {% if objects.image %}
+        <img src="{{ objects.image.url }}">
+    {% else %}
+        <p>No image</p>
+    {% endif %}
     
     <div class="button-container">
         <a href="{% url 'francesinha-remove' objects.id %}"class = "delete-button">Remove</a>
         <a href="{% url 'francesinha-update' objects.id %}" class="update-button">Update</a>
     </div>
+
 </div>
 
 {% endblock %}

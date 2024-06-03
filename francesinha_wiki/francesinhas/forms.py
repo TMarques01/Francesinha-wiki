@@ -1,7 +1,7 @@
 from django import forms
 from .models import Francesinha, Ingredients
 
-
+# Form for Francesinha
 class FrancesinhaForm(forms.ModelForm):
     
     ingredients = forms.ModelMultipleChoiceField(
@@ -11,7 +11,6 @@ class FrancesinhaForm(forms.ModelForm):
         label = "Ingredients"
     )
     
-    
     class Meta:
         model = Francesinha
         fields = [
@@ -19,6 +18,7 @@ class FrancesinhaForm(forms.ModelForm):
             'price',
             'rating',
             'ingredients',
+            'image',
         ]
         
         
@@ -36,3 +36,13 @@ class FrancesinhaForm(forms.ModelForm):
         if price < 0:
             raise forms.ValidationError("Price must be greater than 0")
         return price
+   
+
+# Form for Ingredients
+class IngredientsForm(forms.ModelForm):
+        
+    class Meta:
+        model = Ingredients
+        fields = [
+            'name',
+        ]

@@ -20,6 +20,7 @@ class RestaurantForm(forms.ModelForm):
             'country',
             'rating',
             'francesinhas',
+            'image',
         ]
         
     def clean_rating(self, *args, **kwargs):

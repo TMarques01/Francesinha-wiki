@@ -2,14 +2,14 @@
 
 {% block content %}
 
-<div class ="section">
-    <h1>Restaurants</h1>
+<div class = "section">
+    <h1>Ingredients</h1>
     {% for obj in objects %}
         <h2><a href = '{{obj.get_absolute_url}}' > {{ obj.name }}</a></h2>
     {% endfor %}
 
     <div class = "button-container">
-        <a href="{% url 'restaurant-create' %}">Add Restaurant</a>
+        <a href="{% url 'ingredient-create' %}">Add Ingredient</a>
     </div>
 
 </div>

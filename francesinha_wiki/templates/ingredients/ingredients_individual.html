@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="details-container">
+
+    <h2>Ingredient: {{ objects.name }}</h2>
+    
+    <div class = "button-container">
+        <a href="{% url 'ingredient-remove' objects.id %}"class = "delete-button">Remove</a>
+        <a href="{% url 'ingredient-update' objects.id %}" class="update-button">Update</a>
+    </div>
+
+</div>
+
+
+{% endblock %}

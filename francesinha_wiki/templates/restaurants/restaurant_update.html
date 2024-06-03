@@ -3,7 +3,7 @@
 {% block content %}
 <div class="update-form-container">
     <h2 class="center-text"=>Update Restaurant</h2>
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Update</button>
